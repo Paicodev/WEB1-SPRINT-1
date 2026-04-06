@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <!--Links a Estilos CSS e iconos-->
+    <link rel="stylesheet" href="index-styles.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/3c506e0821.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <!--Logo MiEcommerce-->
+      <a href="/"><div class="logo">MiE<span class="logo2">commerce</span></div></a>
+      <!--Buscador-->
+      <input class="buscador" type="search" placeholder="Buscar productos..." />
+      <!--Navegador de header, contiene el carrito y el interfaz de usuario-->
+      <nav class="nav-header">
+        <!--Carrito-->
+        <a href="/cart"><i class="bi bi-cart"></i> </a>
+        <!--icono e interfaz del usuario-->
+        <div class="nav-user">
+           <!--Checkbox oculto-->
+           <input type="checkbox" id="toggle-menu">
+           <!--Label que actua como boton-->
+           <label for="toggle-menu" class="boton-usuario"> <i class="bi bi-person-circle"></i><a style="color: white; align-self: center">Hola</a></label>
+           <!--Menú Desplegable-->
+           <div class="menu-solapa">
+             <a href="/">Inicio</a>
+             <a href="/cart">Mis Compras</a>
+             <a href="/product">Favoritos</a>
+             <a href="/product-2">Historial</a>
+             <a href="/login">Cerrar Sesión</a>
+             <hr style="border-top: solid 1px gray; width: 100%; height: 1px"></hr>
+             <a href="#">Cambiar a Tema Oscuro</a>
+           </div>
+        </div>
+      </nav>
+    </header>
