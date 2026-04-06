@@ -1,0 +1,542 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Segoe UI";
+  border-bottom: solid 1px #282828;
+}
+
+@media (max-width: 800px) {
+  header {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  margin: 10px 0 10px 10px;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #0cb094;
+  z-index: 1;
+}
+
+/*Parte delgada, esta esta con menos grosor que la parte en negrita*/
+.logo2 {
+  font-weight: initial;
+  color: #0cb094;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  .logo2 {
+    display: none;
+  }
+}
+/*Estilos para el buscador*/
+.buscador {
+  margin-top: 10px;
+  height: 35px;
+  width: 60%;
+  border-radius: 15px;
+}
+
+@media (max-width: 800px) {
+  .buscador {
+    margin: 0;
+  }
+}
+
+.header .nav-header a {
+  text-decoration: none;
+  color: white;
+}
+header i {
+  font-size: 20px;
+  padding: 5px;
+  color: white;
+  background-color: #282828;
+  border-radius: 20px;
+}
+
+.nav-user {
+  display: flex;
+  background-color: #282828;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-family: "Segoe UI";
+  border-radius: 15px 15px 15px 15px;
+}
+
+@media (max-width: 800px) {
+  .username {
+    display: none;
+  }
+}
+
+.nav-user {
+  position: relative;
+  display: inline-block;
+}
+
+.boton-usuario {
+  display: flex;
+  align-items: center;
+  background-color: #232323;
+  color: white;
+  padding: 0 10px 0 1px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .boton-usuario {
+    background-color: white;
+    padding: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .boton-usuario a {
+    display: none;
+  }
+}
+
+.menu-solapa {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 4;
+}
+
+.menu-solapa a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Mostrar menú cuando está activo (usamos checkbox hack) */
+#toggle-menu:checked + .boton-usuario + .menu-solapa {
+  display: block;
+}
+
+/* Ocultar el checkbox */
+#toggle-menu {
+  display: none;
+}
+
+.nav-header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+/* Contenedor del formulario, posicion relativa, bordes redondeados con sombre, maximo de anchura 250px, todo texto en el esta centrado, su z-index esta por encima para superponerse a lo demás*/
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-categorias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+@media (max-width: 800 px) {
+  padding: 10px;
+}
+
+.box-categorias {
+  background: #232323;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px 0 10px;
+  align-items: center;
+  box-shadow: 0 4px 12px black;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  .box-categorias {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .icon-item {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .container-categorias .box-categorias ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+  }
+}
+
+.box-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 0;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .box-item {
+    flex-direction: row;
+    width: 100%;
+    gap: 0.4rem;
+  }
+}
+
+.box-item i {
+  color: white;
+  font-size: 30px;
+  margin: 5px;
+}
+@media (max-width: 800px) {
+  .icon-item {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
+hr {
+  border: solid white 1px;
+  height: 50px;
+}
+
+@media (max-width: 800px) {
+  hr {
+    display: none;
+  }
+}
+/*Estilos para el cuerpo de la página, no tiene margenes, toda fuente usa Segoe UI*/
+main {
+  margin: 0 0 0 0;
+  padding: 0;
+  font-family: "Segoe UI";
+}
+
+/*Estilos del contenedor principal en el body, tiene familia de fuente Segoe UI, Su posicion es relativa, es un contenedor flex con su contenido centrado, la direccion es vertical, para mostrar el formulario y debajo de este el link para loguearse*/
+
+/*Estilos para el Fondo de color verde, no tiene margen, su ancho ocupa toda la pantalla, su altura el 45% del contenedor principal, su z-index indica que esta por detras del formulario*/
+.green-background {
+  position: absolute;
+  margin-top: 10%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background-color: #0cb094;
+  z-index: -1;
+}
+
+.container-promo {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  .container-promo {
+    flex-direction: column;
+  }
+}
+
+.box-promo {
+}
+.ProductHero {
+  border-radius: 15px 15px 15px 15px;
+  height: 180px;
+  width: 350px;
+  z-index: 1;
+  display: flex;
+  cursor: pointer;
+  align-items: flex-end;
+  background-size: cover;
+  background-image: url("https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbo/widgetMultiPartnerCard/20240930152932_ARG_Widget_2x.jpg");
+}
+
+.ProductHero2 {
+  border-radius: 15px 15px 15px 15px;
+  height: 180px;
+  width: 350px;
+  z-index: 1;
+  display: flex;
+  cursor: pointer;
+  align-items: flex-end;
+  background-size: cover;
+  background-image: url("https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/nivel-6/widgetMultiPartnerCard/20240903115231_disney_widgetmulti_mobdsk_mla_@2x.jpg");
+}
+
+@media (max-width: 800px) {
+  .box-promo,
+  .ProductHero,
+  .ProductHero2 {
+    width: 100%;
+  }
+}
+.promo-detalle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: no-wrap;
+  z-index: 2;
+  width: 100%;
+}
+.servicio {
+  margin: 0 0 5px 5px;
+  border-radius: 10px;
+  width: auto;
+  z-index: 2;
+}
+.servicio-detalle {
+  text-align: left;
+  color: white;
+  font-weight: bold;
+  margin: 10px 10px 20px 10px;
+  width: auto;
+  z-index: 2;
+}
+
+.section-products {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .section-products {
+    padding: 0;
+  }
+}
+
+.container-products {
+  max-width: 800px;
+  width: 100%;
+}
+
+.product-title {
+  padding-left: 30px;
+}
+.grid-products {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .grid-products {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-products2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.grid-products2 {
+  display: grid;
+
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  gap: 1rem;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.card-product,
+.card-product-y {
+  display: grid;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px black;
+  padding: 10px;
+}
+
+@media (max-width: 800px) {
+  .card-product,
+  .card-product-y {
+    grid-template-columns: 200px auto;
+  }
+}
+.img-product {
+  height: 168px;
+  margin: 0;
+  background-image: url("https://http2.mlstatic.com/D_NQ_NP_991563-MLA76243004439_052024-O.webp");
+  background-size: cover;
+  border-radius: 20px;
+
+  z-index: 2;
+}
+
+@media (max-width: 800px) {
+  .img-product,
+  .img-product-2,
+  .img-product-x {
+    height: auto !important;
+    width: 200px;
+  }
+}
+
+.img-product-2 {
+  height: 168px;
+  margin: 0;
+  background-image: url("https://imgs.search.brave.com/dKrP5EBt1PSwcCcB-8foL1Bu_Pae34rjUnMtM086A1s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdDQu/ZGVwb3NpdHBob3Rv/cy5jb20vMTA2MzQz/Ny8zMTU1Ni9pLzQ1/MC9kZXBvc2l0cGhv/dG9zXzMxNTU2Nzky/NC1zdG9jay1waG90/by1jYW4tb2YtY29j/YS1jb2xhLXdpdGgu/anBn");
+  background-size: cover;
+  border-radius: 20px;
+
+  z-index: 2;
+}
+
+.img-product-x {
+  height: 168px;
+  margin: 0;
+  background-image: url("https://media.istockphoto.com/id/2156656493/vector/abstract-seamless-gorgeous-geometric-fabric-textile-black-and-gray-square-sharp-repeat.jpg?s=612x612&w=0&k=20&c=yYk193Mpo27dENJD3wKcz0QGMKfnnInoKCFK5Fi2Nb8=");
+  background-size: cover;
+  border-radius: 20px;
+
+  z-index: 2;
+}
+
+.title-card-flex {
+  display: grid;
+  grid-template-columns: 2fr auto 1fr;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.title-card-flex h3 {
+  margin: 0;
+}
+
+.title-product {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 800px) {
+  .title-product {
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  .title-product h3 {
+    font-size: 20px !important;
+  }
+}
+
+.title-product p span {
+  color: gray;
+}
+
+@media (max-width: 800px) {
+  .card-product .points {
+    position: relative;
+    top: 20px;
+    right: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .card-product-y .points {
+    position: relative;
+    top: 20px;
+    right: 30px;
+  }
+}
+.title-card h3 {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.title-card hr {
+  border: 1px solid gray;
+  height: 90%;
+}
+
+@media (max-width: 800px) {
+  .title-card hr {
+    display: none;
+  }
+}
+.title-card {
+  display: flex;
+}
+@media (max-width: 800px) {
+  .title-card {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .title-card-flex {
+    grid-template-rows: 6fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+/*Estilos para el Footer, borde superior gris para diferenciarlo del body, es un contenedor flex que separa su contenido con espacios entre ellos dejando el primero y ultimo cerca del borde, padding ajustable para una mejor apreciación, el color del texto es gris y está centrado.*/
+footer {
+  border-top: solid lightgray 1px;
+  display: flex;
+  padding: 15px;
+  justify-content: space-around;
+  color: gray;
+  align-items: center;
+  font-family: "Segoe UI";
+  flex-wrap: wrap;
+}
+
+/*Estilos para la imagen de las stores, tiene menos margen superior para coincidir con los otros elementos del footer*/
+.social-media .stores {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: space-between;
+}
+
+footer i {
+  font-size: 25px;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+/*Estilos para el texto de copyright, su margen superior es para coincidir con los otros elementos del footer*/
+.copyright {
+}

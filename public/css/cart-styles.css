@@ -1,0 +1,339 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Segoe UI";
+  border-bottom: solid 1px #282828;
+}
+/*Estilos para el encabezado en movil*/
+@media (max-width: 800px) {
+  header {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+/*Estilos para Logo: contiene margenes, negrita, color de letra*/
+.logo {
+  margin: 10px 0 10px 10px;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #0cb094;
+  z-index: 1;
+}
+
+/*Estilos para el texto entre etiquetas span*/
+.logo2 {
+  font-weight: initial;
+  color: #0cb094;
+  z-index: 1;
+}
+/*Estilos para el texto entre etiquetas span en movil*/
+@media (max-width: 800px) {
+  .logo2 {
+    display: none;
+  }
+}
+/*Estilos para el buscador*/
+.buscador {
+  margin-top: 10px;
+  height: 35px;
+  width: 60%;
+  border-radius: 15px;
+}
+/*Estilos para el buscador en móvil*/
+@media (max-width: 800px) {
+  .buscador {
+    margin: 0;
+  }
+}
+/*Estilos para el hipervinculo del navegador en el encabezado*/
+.header .nav-header a {
+  text-decoration: none;
+  color: white;
+}
+/*Estilos para el icono del encabezado*/
+header i {
+  font-size: 20px;
+  padding: 5px;
+  color: white;
+  background-color: #282828;
+  border-radius: 20px;
+}
+/*Estilos para el navegador de usuario*/
+.nav-user {
+  position: relative;
+  display: inline-block;
+}
+/*Estilos para el boton de usuario*/
+.boton-usuario {
+  display: flex;
+  align-items: center;
+  background-color: #232323;
+  color: white;
+  padding: 0 10px 0 1px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+/*Estilos para el boton del usuario en móvil*/
+@media (max-width: 800px) {
+  .boton-usuario {
+    background-color: white;
+    padding: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .boton-usuario a {
+    display: none;
+  }
+}
+/*Estilos para la solapa del usuario*/
+.menu-solapa {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 4;
+}
+
+.menu-solapa a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Mostrar menú cuando está activo*/
+#toggle-menu:checked + .boton-usuario + .menu-solapa {
+  display: block;
+}
+
+/* Ocultar el checkbox */
+#toggle-menu {
+  display: none;
+}
+/*Estilos para el navegador del encabezado*/
+.nav-header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+/* Contenedor principal*/
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+/*Estilos para el hipervinculo al home*/
+.back-to-home {
+  text-decoration: none;
+  display: flex;
+  gap: 1px;
+  align-items: center;
+  justify-content: flex-start;
+  color: rgba(0, 0, 0, 0.815);
+  padding-left: 10%;
+}
+/*Estilos para el hipervinculo al home en móvil*/
+@media (max-width: 800px) {
+  .back-to-home {
+    padding-left: 0;
+    width: auto;
+    justify-content: flex-start;
+  }
+}
+/*Estilos para regla horizontal (linea horizontal)*/
+hr {
+  border: solid white 1px;
+  height: 50px;
+}
+/*Estilos para regla horizontal (linea horizontal) en móvil*/
+@media (max-width: 800px) {
+  hr {
+    display: none;
+  }
+}
+/*Estilos para el main*/
+main {
+  margin: 0 0 0 0;
+  padding: 0;
+  font-family: "Segoe UI";
+}
+/*Estilos para la seccion de productos*/
+.section-products {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .section-products {
+    padding: 0;
+  }
+}
+/*Estilos para el contenedor de productos*/
+.container-products {
+  max-width: 1100px;
+  width: 100%;
+}
+/*Estilos para el titulo del producto*/
+.product-title {
+}
+
+.flex-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 50px;
+}
+/*Estilos para la etiqueta a*/
+a {
+  text-decoration: none;
+  color: black;
+}
+/*Estilos para la tarjeta del producto*/
+.card-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px gray;
+  padding: 10px;
+}
+
+@media (max-width: 800px) {
+  .card-product {
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+/*Estilos para las secciones de las tarjetas de producto*/
+.section-a,
+.section-b {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .section-a {
+    justify-self: flex-start;
+    justify-content: space-between;
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  .section-b {
+    justify-self: flex-end;
+    justify-content: space-between;
+    width: 80%;
+  }
+}
+/*Estilos para las imagenes de los productos*/
+.img-product,
+.img-product-2,
+.img-product-3 {
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  background-size: cover;
+  border-radius: 20px;
+
+  z-index: 2;
+}
+
+.img-product {
+  background-image: url("https://http2.mlstatic.com/D_NQ_NP_991563-MLA76243004439_052024-O.webp");
+}
+
+.img-product-2 {
+  background-image: url("https://file.adomicil.io/carlsjr.adomicil.io/_files/images/product/lanzamientos08classiccarlcombo-0332105789488231.jpg");
+  background-position: center;
+}
+
+.img-product-3 {
+  background-image: url("https://imgs.search.brave.com/dKrP5EBt1PSwcCcB-8foL1Bu_Pae34rjUnMtM086A1s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdDQu/ZGVwb3NpdHBob3Rv/cy5jb20vMTA2MzQz/Ny8zMTU1Ni9pLzQ1/MC9kZXBvc2l0cGhv/dG9zXzMxNTU2Nzky/NC1zdG9jay1waG90/by1jYW4tb2YtY29j/YS1jb2xhLXdpdGgu/anBn");
+}
+
+/*Estilos para la clase del precio de las tarjetas*/
+.card-price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.product-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.button-3 {
+}
+/*Estilos para los botones*/
+.button-1,
+.button-3 {
+  background-color: #495052;
+  color: white;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 10px;
+  width: 80px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-2 {
+  display: flex;
+  justify-content: space-between;
+  border: solid gray 1px;
+  border-radius: 20px;
+  padding: 10px;
+  width: 80px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+/*Estilos para el Footer*/
+footer {
+  border-top: solid lightgray 1px;
+  display: flex;
+  padding: 15px;
+  justify-content: space-around;
+  color: gray;
+  align-items: center;
+  font-family: "Segoe UI";
+  flex-wrap: wrap;
+}
+
+/*Estilos para los iconos del pie de pagina*/
+.social-media .stores {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: space-between;
+}
+
+footer i {
+  font-size: 25px;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.copyright {
+}
